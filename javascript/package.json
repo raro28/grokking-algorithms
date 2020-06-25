@@ -1,0 +1,13 @@
+{
+  "name": "algorithms",
+  "version": "0.0.0",
+  "description": "algorithms",
+  "type": "module",
+  "scripts": {
+  },
+  "keywords": [
+    "algorithms"
+  ],
+  "author": "Hector Diaz",
+  "license": "ISC"
+}

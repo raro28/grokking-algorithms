@@ -1,0 +1,17 @@
+{
+  "name": "algorithms-ts",
+  "version": "0.0.0",
+  "description": "algorithms",
+  "type": "module",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "algorithms"
+  ],
+  "author": "Hector Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^3.9.5"
+  }
+}

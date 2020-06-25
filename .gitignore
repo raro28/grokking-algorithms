@@ -1,0 +1,9 @@
+bin
+Debug
+target
+.settings
+node_modules
+.classpath
+.project
+obj
+.vscode
