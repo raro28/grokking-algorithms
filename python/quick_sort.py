@@ -1,14 +1,7 @@
+import random
+
 def pick_pivot(array):
-    return 2
-
-
-def swap(array, a, b):
-    tmpA = array[a]
-
-    array[a] = array[b]
-    array[b] = tmpA
-    return array
-
+    return random.randint(0, len(array) - 1)
 
 def getpartitions(pivot, array):
     result = [[], []]
@@ -25,13 +18,8 @@ def getpartitions(pivot, array):
 def quick_sort(array):
     if len(array) < 2:
         return array.copy()
-    result = []
-    if len(array) == 2:
-        result = array.copy()
-        if array[0] > array[1]:
-            result = swap(result, 0, 1)
-        return result
     else:
+        result = []
         pivot = pick_pivot(array)
         partitions = getpartitions(pivot, array)
         return quick_sort(partitions[0]) + [array[pivot]] + quick_sort(partitions[1])
