@@ -1,18 +1,8 @@
 import random
 
+
 def pick_pivot(array):
     return random.randint(0, len(array) - 1)
-
-def getpartitions(pivot, array):
-    result = [[], []]
-    for i in range(len(array)):
-        item = array[i]
-        if(i != pivot):
-            if(item <= array[pivot]):
-                result[0].append(item)
-            else:
-                result[1].append(item)
-    return result
 
 
 def quick_sort(array):
@@ -21,8 +11,13 @@ def quick_sort(array):
     else:
         result = []
         pivot = pick_pivot(array)
-        partitions = getpartitions(pivot, array)
-        return quick_sort(partitions[0]) + [array[pivot]] + quick_sort(partitions[1])
+        #https://realpython.com/list-comprehension-python/
+        less = [array[i] for i in range(
+            len(array)) if i != pivot and array[i] <= array[pivot]]
+        greater = [array[i] for i in range(
+            len(array)) if i != pivot and array[i] > array[pivot]]
+
+        return quick_sort(less) + [array[pivot]] + quick_sort(greater)
 
 
 print("\nresults\n")
